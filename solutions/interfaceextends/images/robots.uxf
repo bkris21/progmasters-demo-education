@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <help_text/>
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>430</x>
+      <y>390</y>
+      <w>210</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+FlyableRobot
+--
++ liftTo(altitude: long)
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>110</x>
+      <y>440</y>
+      <w>210</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>C3PO
+--
+- position: Point
+- angle: int
+- path: List&lt;Point&gt;
+--
++ C3PO(position: Point)
++ moveTo(position: Point)
++ fastMoveTo(position: Point)
++ rotate(angle: int)
++ getPath():  List&lt;Point&gt;
++ getPosition(): Point
++ getAngle():int
+- walkTo(position: Point)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>430</x>
+      <y>180</y>
+      <w>210</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+MovableRobot
+--
++ moveTo(position: Point)
++ fastMoveTo(position: Point)
++ rotate(angle: int)
++ getPath():  List&lt;Point&gt;
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>750</x>
+      <y>390</y>
+      <w>210</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>AstroBoy
+--
+- position: Point
+- angle: int
+- path: List&lt;Point&gt;
++ final static ALTITUDE: long
+--
++ AstroBoy(position: Point)
++ flyTo(position: Point)
++ liftTo(altitude: long)
++ moveTo(position: Point)
++ fastMoveTo(position: Point)
++ rotate(angle: int)
++ getPath():  List&lt;Point&gt;
++ getPosition(): Point
++ getAngle():int
++ getAltitude(): long
+- walkTo(position: Point)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>310</x>
+      <y>540</y>
+      <w>140</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>630</x>
+      <y>540</y>
+      <w>140</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>120.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>430</x>
+      <y>510</y>
+      <w>210</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>Point
+--
+- final x: long
+- final y: long
+- final z: long
+--
++ Point(x: long, y: long, z: long)
++ getX(): long
++ getY(): long
++ getZ(): long</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>300</y>
+      <w>30</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>630</x>
+      <y>430</y>
+      <w>140</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>200</x>
+      <y>230</y>
+      <w>250</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;.</panel_attributes>
+    <additional_attributes>230.0;10.0;10.0;210.0</additional_attributes>
+  </element>
+</diagram>
